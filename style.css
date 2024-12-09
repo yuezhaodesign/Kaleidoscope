@@ -1,0 +1,69 @@
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+
+canvas {
+    display: block;
+}
+
+#content {
+    width: 20vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    background-color: black;
+    font-family: 'Arial', sans-serif;
+    font-size: 1em;
+    text-align: center;
+}
+
+#showEllipse {
+    width: 100px; 
+    height: 100px; 
+    background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4); 
+    background-size: 400%;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    margin: 10vh 0 10vh 0;
+    transition: transform 0.3s;
+}
+
+#showEllipse:hover {
+    animation: animate 8s linear infinite;
+    transform: scale(1.2);
+}
+
+@keyframes animate {
+    0% {
+        background-position: 0%;
+    }
+    100% {
+        background-position: 400%;
+    }
+}
+
+
+#showSquare {
+    width: 80px; 
+    height: 80px; 
+    background: linear-gradient(90deg,  #f441a5, #ffeb3b, #03a9f4, #f441a5); 
+    background-size: 400%;
+    border: none;
+    cursor: pointer;
+    margin: 0 0 10vh 0;
+    transition: transform 0.3s;
+}
+
+#showSquare:hover {
+    animation: animate 8s linear infinite;
+    transform: scale(1.2);
+}
